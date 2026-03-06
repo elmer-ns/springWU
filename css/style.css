@@ -86,7 +86,9 @@ main {
 }
 
 #info-boxes > * {
-    background-color: green;
+    background-color: gray;
+
+    padding: 5px;
 }
 
 #main-links a {
