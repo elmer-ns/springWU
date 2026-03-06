@@ -32,11 +32,13 @@ header {
     margin: 5px;
 }
 
-#nav-links * {
+#nav-links a {
+    display: block;
     padding: 5px;
+    width: auto;
 }
 
-#nav-links *:hover {
+#nav-links a:hover {
     backdrop-filter: brightness(90%);
 }
 
@@ -72,16 +74,26 @@ main {
     justify-content: center;
     gap: 10%;
 
+    margin-top: 8vh;
+
     width: 100%;
 }
 
-#main-links > li {
+#info-boxes {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#info-boxes > * {
+    background-color: green;
+}
+
+#main-links a {
     background-color: rgba(0, 0, 0, 0.115);
 
     padding: 10px 20px 10px 20px;
     
-    margin-top: 8vh;
-
     border-radius: 999px; /* Tydligen finns det inget bättre sätt att göra detta på??? */
 
     font-size: 1.125rem;
@@ -107,6 +119,10 @@ section:nth-of-type(3) {
     grid-area: s3;
 }
 
+body > section, main, aside {
+    padding: 10px;
+}
+
 aside {
     grid-area: as;
 }
@@ -128,6 +144,8 @@ footer {
             's1'
             's2'
             'ft';
+
+        grid-template-columns: 1fr;
     }
 
     #about-container {
@@ -158,6 +176,16 @@ footer {
         transition: left 0.3s;
 
         z-index: 10;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        list-style: none;
+
+        margin: 5px;
     }
 
     #nav-menu.visible {
@@ -195,6 +223,8 @@ footer {
         'mn mn'
         's1 s2'
         'ft ft';
+        
+        grid-template-columns: 1fr 1fr;
     }
 
     #about-container {
