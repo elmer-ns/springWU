@@ -2,6 +2,8 @@
 
 body {
     display: grid;
+
+    font-family: system-ui;
 }
 
 * {
@@ -18,13 +20,79 @@ header {
 }
 
 #nav-menu {
-    background-color: gray;
-
     grid-area: nv;
 }
 
+#nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+
+    margin: 5px;
+}
+
+#nav-links * {
+    padding: 5px;
+}
+
+#nav-links *:hover {
+    backdrop-filter: brightness(90%);
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+a:visited {
+    color: unset;
+    text-decoration: none;
+}
+
+
 main {
     grid-area: mn;
+
+    height: 75vh;
+
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#main-links {
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+
+    justify-content: center;
+    gap: 10%;
+
+    width: 100%;
+}
+
+#main-links > li {
+    background-color: rgba(0, 0, 0, 0.115);
+
+    padding: 10px 20px 10px 20px;
+    
+    margin-top: 8vh;
+
+    border-radius: 999px; /* Tydligen finns det inget bättre sätt att göra detta på??? */
+
+    font-size: 1.125rem;
+}
+
+main > h2 {
+    font-size: 4rem;
+}
+
+main > h3 {
+    font-size: 1.25rem;
 }
 
 section:nth-of-type(1) {
@@ -49,6 +117,10 @@ footer {
 
 /* Mobile */
 @media screen and (max-width: 599px) {
+    :root {
+        font-size: 1rem;
+    }
+
     #index-container {
         grid-template-areas: 
             'hd'
@@ -75,6 +147,8 @@ footer {
     }
 
     #nav-menu {
+        background-color: red;
+
         position: fixed;
 
         height: 100vh;
@@ -110,6 +184,10 @@ footer {
 
 /* Desktop */
 @media screen and (min-width: 600px) {
+    :root {
+        font-size: 1rem;
+    }
+
     #index-container {
         grid-template-areas: 
         'hd hd '
