@@ -101,6 +101,18 @@ main {
     font-size: 1.125rem;
 }
 
+#showcase-img {
+    display: grid;
+    gap: 5px;
+}
+
+#showcase-img > * {
+    width: 100%;
+    height: 100%;
+
+    background-color: orange;
+}
+
 main > h2 {
     font-size: 4rem;
 }
@@ -167,11 +179,16 @@ footer {
 
     #showcase-container {
         grid-template-areas: 
-        'hd';
+        'hd'
+        'mn'
+        'ft';
 
         grid-template-columns: 1fr;
     }
 
+    #showcase-img {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     #menu-button {
         position: fixed;
@@ -267,9 +284,15 @@ footer {
     #showcase-container {
         grid-template-areas:
         'hd'
-        'nv';
+        'nv'
+        'mn'
+        'ft';
 
         grid-template-columns: 1fr;
+    }
+
+    #showcase-img {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     #nav-menu {
