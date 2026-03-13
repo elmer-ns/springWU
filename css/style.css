@@ -141,19 +141,35 @@ footer {
 
     #index-container {
         grid-template-areas: 
-            'hd'
-            'mn'
-            's1'
-            's2'
-            'ft';
+        'hd'
+        'mn'
+        's1'
+        's2'
+        'ft';
 
         grid-template-columns: 1fr;
     }
 
     #about-container {
         grid-template-areas: 
-            'hd'
-            'ft';
+        'hd'
+        'ft';
+
+        grid-template-columns: 1fr;
+    }
+
+    #get_started-container {
+        grid-template-areas: 
+        'hd';
+
+        grid-template-columns: 1fr
+    }
+
+    #showcase-container {
+        grid-template-areas: 
+        'hd';
+
+        grid-template-columns: 1fr;
     }
 
 
@@ -238,6 +254,22 @@ footer {
         'ft ft ft';
 
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #get_started-container {
+        grid-template-areas: 
+        'hd'
+        'nv';
+
+        grid-template-columns: 1fr;
+    }
+
+    #showcase-container {
+        grid-template-areas:
+        'hd'
+        'nv';
+
+        grid-template-columns: 1fr;
     }
 
     #nav-menu {
