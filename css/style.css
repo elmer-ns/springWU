@@ -1,4 +1,14 @@
+/* Temporärt */
+
+html {
+    height: 101vh;
+}
+
 /* Generellt */
+
+:root {
+    interpolate-size: allow-keywords;
+}
 
 body {
     display: grid;
@@ -105,6 +115,58 @@ main {
     display: grid;
     gap: 5px;
 }
+
+#faq {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+#faq h2 {
+    font-size: 1rem;
+}
+
+#faq > ul {
+    list-style: none;
+
+    width: 75%;
+}
+
+.faq-item h3 {
+    background-color: rebeccapurple;
+
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    cursor: pointer;
+}
+
+.faq-item p {
+    height: 0px;
+
+    transition: height 0.25s ease-in-out, padding 0.25s ease-in-out;
+    
+    overflow: hidden;
+
+    background-color: green;
+
+    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.faq-item.open p {
+    height: auto;
+
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 
 #showcase-img > * {
     width: 100%;
