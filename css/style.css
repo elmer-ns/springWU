@@ -12,7 +12,10 @@ html {
     /* --background-color: white; */
     --background-color: white;
     --primary-color: whitesmoke;
-    --secondary-color: aliceblue;
+    --primary-text-color: var(--secondary-color);
+
+    --secondary-color: #A2574B;
+    --secondary-text-color: whitesmoke;
 }
 
 body {
@@ -21,6 +24,8 @@ body {
     display: grid;
 
     font-family: system-ui;
+
+    color: var(--primary-text-color);
 }
 
 * {
@@ -123,12 +128,14 @@ main {
 
 #info-boxes > * {
     background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
 
     padding: 5px;
 }
 
 #main-links a {
     background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
 
     padding: 10px 20px 10px 20px;
     
@@ -169,6 +176,7 @@ main {
 
 .faq-item h3 {
     background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
 
     padding: 5px;
     padding-left: 15px;
@@ -187,6 +195,7 @@ main {
 
 .faq-item p {
     background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
     
     overflow: hidden;
 
@@ -423,5 +432,6 @@ footer {
 
     body > footer:hover, main:hover, section:hover, aside:hover, header:hover {
         background-color: var(--primary-color);
+        color: var(--primary-text-color);
     }
 }
