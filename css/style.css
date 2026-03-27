@@ -11,11 +11,12 @@ html {
 
     /* --background-color: white; */
     --background-color: white;
+    
     --primary-color: whitesmoke;
     --primary-text-color: var(--secondary-color);
 
     --secondary-color: #A2574B;
-    --secondary-text-color: whitesmoke;
+    --secondary-text-color: white;
 }
 
 body {
