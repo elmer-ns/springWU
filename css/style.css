@@ -130,7 +130,7 @@ main > h3 {
     font-size: 1.25rem;
 }
 
-/* (saker specifika för index.html) */
+/* index.html */
 #main-links {
     display: flex;
     flex-direction: row;
@@ -256,6 +256,37 @@ main > h3 {
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+/* get_started.html */
+#get-veii {
+    display: flex;
+    justify-content: space-evenly;
+
+    font-size: 0.75rem;
+}
+
+#get-veii ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    list-style: none;
+
+    width: 50%;
+}
+
+#get-veii h2 {
+    font-size: 1.5rem;
+}
+#get-veii h3 {
+    font-size: 0.75rem;
+}
+
+#get-veii li {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
 }
 
 /* Ease of life */
