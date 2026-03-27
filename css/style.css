@@ -111,8 +111,6 @@ a:visited {
 main {
     grid-area: mn;
 
-    height: 75vh;
-
     display: flex;    
     flex-direction: column;
     justify-content: center;
@@ -290,6 +288,7 @@ footer {
         'ft';
 
         grid-template-columns: 1fr;
+        grid-template-rows: auto 75vh auto auto auto;
     }
 
     #about-container {
@@ -305,10 +304,14 @@ footer {
     }
 
     #get_started-container {
-        grid-template-areas: 
-        'hd';
+       grid-template-areas: 
+        'hd'
+        'mn'
+        's1'
+        'ft';
 
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 50vh auto auto;
     }
 
     #showcase-container {
@@ -396,6 +399,7 @@ footer {
         'ft ft';
         
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 75vh auto auto;
     }
 
     #about-container {
@@ -413,9 +417,13 @@ footer {
     #get_started-container {
         grid-template-areas: 
         'hd'
-        'nv';
+        'nv'
+        'mn'
+        's1'
+        'ft';
 
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto 60vh auto auto;
     }
 
     #showcase-container {
@@ -426,6 +434,7 @@ footer {
         'ft';
 
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto 50vh auto;
     }
 
     #showcase-img {
@@ -438,9 +447,6 @@ footer {
 
         width: auto;
         height: auto;
-    }
-
-    #nav-links a {
     }
 
     #menu-button {
