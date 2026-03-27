@@ -16,7 +16,7 @@ html {
     --primary-text-color: var(--secondary-color);
 
     --secondary-color: #A2574B;
-    --secondary-text-color: white;
+    --secondary-text-color: var(--background-color);
 }
 
 body {
