@@ -34,6 +34,26 @@ body {
     padding: 0px;
 }
 
+.small {
+    font-size: 0.8rem;
+}
+
+.note {
+    font-style: italic;
+}
+
+.superscript {
+    vertical-align:super;
+}
+
+ul {
+    list-style: circle inside;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 header {
     grid-area: hd;
 
@@ -97,7 +117,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 }
 
 #main-links {
@@ -131,7 +150,7 @@ main {
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
 
-    padding: 5px;
+    padding: 7px;
 }
 
 #main-links a {
@@ -224,10 +243,11 @@ main {
 }
 
 main > h2 {
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 main > h3 {
+    margin-top: 15px;
     font-size: 1.25rem;
 }
 
