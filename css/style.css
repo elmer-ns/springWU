@@ -471,12 +471,12 @@ aside {
 
         cursor: pointer;
 
-        left: 14px;
-        top: 14px;
+        left: 24px;
+        top: 24px;
     }
 
     #menu-button i {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #nav-menu {
@@ -512,7 +512,7 @@ aside {
 
     #fade-layer {
         background-color: black;
-        filter: opacity(25%);
+        filter: opacity(40%);
 
         display: none;
 
