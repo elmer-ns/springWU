@@ -1,0 +1,7 @@
+OM DU SER DENNA SÅ HAR JAG GLÖMT TA BORT DEN!!
+
+Glöm inte:
+1. TA BORT todo.txt!!!!
+2. Se till att alla nav länkar har rätt .selected
+
+Att göra:
