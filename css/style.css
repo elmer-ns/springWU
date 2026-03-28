@@ -88,6 +88,10 @@ header {
     text-align: center;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 header h1 {
     margin-bottom: 5px;
 }
@@ -141,6 +145,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    text-align: center;
 }
 
 main > h2 {
@@ -347,7 +353,7 @@ aside {
 }
 
 /* Mobile */
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 699px) {
     :root {
         font-size: 1rem;
     }
@@ -405,8 +411,12 @@ aside {
 
         cursor: pointer;
 
-        left: 5px;
-        top: 5px;
+        left: 14px;
+        top: 14px;
+    }
+
+    #menu-button i {
+        font-size: 2rem;
     }
 
     #nav-menu {
@@ -458,7 +468,7 @@ aside {
 }
 
 /* Desktop */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     :root {
         font-size: 1rem;
     }
