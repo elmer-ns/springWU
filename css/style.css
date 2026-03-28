@@ -81,6 +81,11 @@ ul {
 
 /* Header */
 
+.icon {
+    height: 4rem;
+    aspect-ratio: 1;
+}
+
 header {
     z-index: 10;
 
@@ -91,8 +96,16 @@ header {
     text-align: center;
 }
 
+header > * {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 header h1 {
