@@ -10,12 +10,10 @@
 </head>
 
 <body id="get_started-container">
-    <div id="menu-button">
-        <i class="material-icons">menu</i>
-    </div>
-
-    <header>
-        <h1>Veii</h1>
+    <div id="top-bar">
+        <header>
+            <h1>Veii</h1>
+        </header>
         <nav id="nav-menu">
             <menu id="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -24,25 +22,38 @@
                 <li><a href="about.html">About</a></li>
             </menu>
         </nav>
-    </header>
 
-    <div id="fade-layer"></div>
+        <div id="menu-button">
+            <i class="material-icons">menu</i>
+        </div>
+        <div id="fade-layer"></div>
+    </div>
 
-    <main id="get-veii">
-        <h2>To Get Started, You Can:</h2>
+    <main id="get-started">
+        <h2>Getting Started</h2>
+
         <ul>
             <li>
-                <h3>View Our Github</h3>
-                <h3>Visit Our crates.io</h3>
+                <h3>Check out our</h3>
+                <ul>
+                    <li><a href="https://github.com">GitHub</a></li>
+                    <li><a href="https://crates.io">crates.io page</a></li>
+                </ul>
             </li>
             <li>
-                <h3>Something else</h3>
-            </li>
-            <li>3
-                <h3>H3</h3>
-            </li>
-            <li>
-                <h3>h3</h3>
+                <h3>Use the crate</h3>
+
+                <h4>Add as dependency:</h4>
+                <p>To create your own custom applications in Rust with Veii, use <code>cargo add veii</code> to add Veii
+                    as a depedency to your own project. Allows you to create your own custom UI node properties, compile
+                    you own runtime, or write your application in pure Rust.</p>
+
+                <h4>Install runtime version:</h4>
+                <p>There is also a precompiled runtime version of Veii, which can read create UIs from script- and
+                    custom-format markup-files. Currently, it is also installed though <a
+                        href="https://doc.rust-lang.org/cargo/getting-started/installation.html">Cargo</a>, by
+                    running <code>cargo add veii-runtime</code> in your command line.</p>
+
             </li>
         </ul>
     </main>

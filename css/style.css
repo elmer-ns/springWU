@@ -6,7 +6,7 @@ html {
 
 /* Bakgrundsfärger */
 
-header {
+#top-bar {
     background-color: var(--bg3);
 }
 
@@ -35,7 +35,8 @@ footer {
     --bg2: rgb(240, 230, 230);
     --bg3: rgb(238, 226, 226);
 
-    --theme-color: #a2574b;
+    --theme-color: rgb(162, 87, 75); /* #a2574b */
+    --secondary-color: indianred;
 
     --text-color: var(--theme-color);
     --text-color2: var(--bg2);
@@ -81,6 +82,8 @@ ul {
 /* Header */
 
 header {
+    z-index: 10;
+
     grid-area: hd;
 
     padding: 5px;
@@ -99,10 +102,16 @@ header nav {
     padding-top: 5px;
 }
 
+#top-bar {
+    grid-area: tp;
+    position: sticky;
+    top: 0px;
+}
+
 /* Nav */
 
 #nav-menu {
-    grid-area: nv;
+    background-color: inherit;
 }
 
 #nav-links {
@@ -140,7 +149,7 @@ a:visited {
 
 /* Main */
 
-main {
+#welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,11 +158,11 @@ main {
     text-align: center;
 }
 
-main > h2 {
+#welcome > h2 {
     font-size: 2rem;
 }
 
-main > h3 {
+#welcome > h3 {
     margin-top: 15px;
     font-size: 1.25rem;
 }
@@ -288,40 +297,77 @@ main > h3 {
 }
 
 /* get_started.html */
-#get-veii {
-    display: flex;
-    justify-content: space-evenly;
 
-    font-size: 0.75rem;
+code {
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+
+    white-space: nowrap;
+
+    background-color: var(--bg2);
+    padding: 1px 5px 1px 5px;
+    border-radius: 5px;
+    user-select: all;
 }
 
-#get-veii ul {
+#get-started {
+    font-size: 1rem;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
 
-    list-style: none;
+#get-started a {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
 
+#get-started h2 {
+    font-size: 1rem;
+
+    justify-self: center;
+    font-size: 4rem;
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+#get-started h3 {
+    font-size: 1.5rem;
+}
+
+#get-started h4 {
+    font-size: 1rem;
+}
+
+#get-started > ul {
     width: 50%;
 }
 
-#get-veii h2 {
-    font-size: 1.5rem;
-}
-#get-veii h3 {
-    font-size: 0.75rem;
+#get-started ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
 }
 
-#get-veii li {
-    padding: 15px;
-    background-color: var(--theme-color);
-    color: var(--text-color2);
+#get-started > ul > li {
+    color: var(--text-color);
+}
+
+#get-started > ul {
+    gap: 20px;
 }
 
 /* Ease of life */
 
 main {
     grid-area: mn;
+}
+
+nav {
+    grid-area: nv;
 }
 
 section:nth-of-type(1) {
@@ -360,7 +406,7 @@ aside {
 
     #index-container {
         grid-template-areas:
-            "hd"
+            "tp"
             "mn"
             "s1"
             "s2"
@@ -372,7 +418,7 @@ aside {
 
     #about-container {
         grid-template-areas:
-            "hd"
+            "tp"
             "s1"
             "as"
             "s2"
@@ -384,7 +430,7 @@ aside {
 
     #get_started-container {
         grid-template-areas:
-            "hd"
+            "tp"
             "mn"
             "s1"
             "ft";
@@ -395,7 +441,7 @@ aside {
 
     #showcase-container {
         grid-template-areas:
-            "hd"
+            "tp"
             "mn"
             "ft";
 
@@ -408,6 +454,7 @@ aside {
 
     #menu-button {
         position: fixed;
+        z-index: 10;
 
         cursor: pointer;
 
@@ -420,8 +467,6 @@ aside {
     }
 
     #nav-menu {
-        background-color: inherit;
-
         position: fixed;
 
         height: 100vh;
@@ -431,7 +476,7 @@ aside {
         left: -80vw;
         transition: left 0.3s;
 
-        z-index: 10;
+        z-index: 100;
     }
 
     #nav-menu.visible {
@@ -456,10 +501,13 @@ aside {
         display: none;
 
         position: fixed;
+
+        top: 0;
+
         width: 100vw;
         height: 100vh;
 
-        z-index: 5;
+        z-index: 10;
     }
 
     #fade-layer.visible {
@@ -475,49 +523,45 @@ aside {
 
     #index-container {
         grid-template-areas:
-            "hd hd "
-            "nv nv"
+            "tp tp"
             "mn mn"
             "s1 s2"
             "ft ft";
 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto 75vh auto auto;
+        grid-template-rows: auto 75vh auto auto;
     }
 
     #about-container {
         grid-template-areas:
-            "hd hd hd"
-            "nv nv nv"
+            "tp tp tp"
             "s1 s1 as"
             "s2 s3 as"
             "ft ft ft";
 
         grid-template-columns: 2fr 2fr 3fr;
-        grid-template-rows: auto auto 75vh 75vh auto;
+        grid-template-rows: auto 75vh 75vh auto;
     }
 
     #get_started-container {
         grid-template-areas:
-            "hd"
-            "nv"
+            "tp"
             "mn"
             "s1"
             "ft";
 
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 60vh auto auto;
+        grid-template-rows: auto 60vh auto auto;
     }
 
     #showcase-container {
         grid-template-areas:
-            "hd"
-            "nv"
+            "tp"
             "mn"
             "ft";
 
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 50vh auto;
+        grid-template-rows: auto 50vh auto;
     }
 
     #showcase-img {
@@ -526,9 +570,7 @@ aside {
 
     #nav-menu {
         display: block;
-        position: static;
 
-        width: auto;
         height: auto;
     }
 
