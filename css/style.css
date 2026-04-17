@@ -36,7 +36,7 @@ footer {
     --bg3: rgb(238, 226, 226);
 
     --theme-color: rgb(162, 87, 75); /* #a2574b */
-    --secondary-color: indianred;
+    --secondary-color: rgb(226, 121, 121);
 
     --text-color: var(--theme-color);
     --text-color2: var(--bg2);
@@ -153,6 +153,28 @@ a {
 a:visited {
     color: unset;
     text-decoration: none;
+}
+
+/* Footer */
+footer {
+    padding: var(--padding);
+
+    font-size: 0.75rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+
+    height: 15vh;
+}
+
+footer h2 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
 }
 
 /* Main */
