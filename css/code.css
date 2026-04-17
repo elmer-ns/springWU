@@ -1,0 +1,28 @@
+/* 
+CSS för att styla kodblock. Flyttade denna till en egen fil för att det var mindre jobbigt.
+*/
+
+.value {
+    color: yellow;
+}
+.const {
+    color: orange;
+}
+.keyword {
+    color: red;
+}
+.crate {
+    color: var(--theme-color);
+    text-shadow: 1px 0px 1px color-mix(in srgb, var(--theme-color), white 25%);
+}
+.ident {
+    color: rgb(50, 200, 50);
+}
+.function {
+    color: blueviolet;
+}
+
+.dark {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}

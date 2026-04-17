@@ -7,6 +7,7 @@
     <title>Veii - Get Started</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/code.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -55,7 +56,7 @@
                 <h3>Use the crate</h3>
 
                 <h4>Add as dependency:</h4>
-                <p>To create your own custom applications in Rust with Veii, use <code>cargo add veii</code> to add Veii
+                <p>To create your own custom applications in Rust with Veii, use <code class="cmd">cargo add veii</code> to add Veii
                     as a depedency to your own project. Allows you to create your own custom UI node properties, compile
                     you own runtime, or write your application in pure Rust.</p>
 
@@ -63,13 +64,37 @@
                 <p>There is also a precompiled runtime version of Veii, which can read create UIs from script- and
                     custom-format markup-files. Currently, it is also installed though <a
                         href="https://doc.rust-lang.org/cargo/getting-started/installation.html">Cargo</a>, by
-                    running <code>cargo add veii-runtime</code> in your command line.</p>
+                    running <code class="cmd">cargo add veii-runtime</code> in your command line.</p>
 
             </li>
         </ul>
     </main>
     
-    <section>SECTION (S1)</section>
+    <section id="guide">
+        <h2>Using Veii</h2>
+        
+        <h3>Veii Rust crate</h3>
+        <p>main.rs</p>
+        <code class="dark">
+            <span class="keyword">use</span> <span class="crate">veii</span><br>
+            <br>
+            <span class="keyword">fn</span> <span class="function">main</span>() {<br>
+            &emsp;<span class="keyword">let</span> app = <span class="ident">App</span>::<span class="function">new</span>();<br>
+            &emsp;<span class="keyword">let</span> window = app.<span class="function">create_window</span>();<br>
+            &emsp;app.<span class="function">insert_node</span>(window, (<br>
+            &emsp;&emsp;<span class="ident">BackgroundColor</span>(<span class="ident">Color</span>::<span class="const">WHITE</span>),<br>
+            &emsp;&emsp;<span class="ident">Text</span>(<span class="value">"test"</span>.<span class="function">into</span>()),<br>
+            &emsp;&emsp;<span class="ident">TextColor</span>(<span class="ident">Color</span>::<span class="const">BLACK</span>)));<br>
+            &emsp;app.<span class="function">run_with_backend</span>::&lt;<span class="ident">WinitBackend</span>&gt;();<br>
+            }
+            
+        </code>
+        <p>Please refer to our <a href="https://docs.rs/veii">documentation</a> for more details.</p>
+
+        <h3>Veii runtime</h3>
+        <code class="cmd">veii-runtime --help</code>
+        <code class="cmd">veii-runtime run some_file.veii</code>
+    </section>
 
     <footer>FOOTER</footer>
 

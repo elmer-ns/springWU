@@ -312,16 +312,20 @@ a:visited {
 
 /* get_started.html */
 
+.cmd {
+    white-space: nowrap;
+    user-select: all;
+}
+
 code {
+    display: inline-block;
+
     color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
-
-    white-space: nowrap;
 
     background-color: var(--bg2);
     padding: 1px 5px 1px 5px;
     border-radius: 5px;
-    user-select: all;
 }
 
 #get-started {
@@ -374,6 +378,10 @@ code {
 
 #get-started > ul {
     gap: var(--padding);
+}
+
+#guide a {
+    text-decoration: solid underline;
 }
 
 /* Ease of life */
