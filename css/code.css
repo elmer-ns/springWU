@@ -3,23 +3,23 @@ CSS för att styla kodblock. Flyttade denna till en egen fil för att det var mi
 */
 
 .value {
-    color: yellow;
+    color: rgb(233, 233, 66);
 }
 .const {
     color: orange;
 }
 .keyword {
-    color: red;
+    color: rgb(255, 30, 30);
 }
 .crate {
     color: var(--theme-color);
     text-shadow: 1px 0px 1px color-mix(in srgb, var(--theme-color), white 25%);
 }
 .ident {
-    color: rgb(50, 200, 50);
+    color: rgb(92, 244, 92);
 }
 .function {
-    color: blueviolet;
+    color: rgb(149, 117, 180);
 }
 
 .dark {
