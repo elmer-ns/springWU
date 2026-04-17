@@ -260,8 +260,15 @@ a:visited {
     width: 75%;
 }
 
-.faq-item h3 {
+.faq-item {
     background-color: var(--theme-color);
+}
+
+.faq-item:hover {
+    background-color: color-mix(in srgb, var(--theme-color), white 5%);
+}
+
+.faq-item h3 {
     color: var(--text-color2);
 
     padding: var(--small-padding);
@@ -282,7 +289,6 @@ a:visited {
 }
 
 .faq-item p {
-    background-color: var(--theme-color);
     color: var(--text-color2);
 
     overflow: hidden;
