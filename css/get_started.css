@@ -1,0 +1,73 @@
+/* Styling specifikt för get_started.html */
+
+.cmd {
+    white-space: nowrap;
+    user-select: all;
+}
+
+code {
+    display: inline-block;
+
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+
+    background-color: var(--bg2);
+    padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
+    border-radius: 5px;
+}
+
+#get-started {
+    font-size: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: var(--padding) var(--padding) var(--large-padding) var(--padding);
+}
+
+#get-started a {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+#get-started h2 {
+    font-size: 1rem;
+
+    justify-self: center;
+    font-size: 4rem;
+    text-align: center;
+
+    margin-bottom: var(--large-padding);
+}
+
+#get-started h3 {
+    font-size: 1.5rem;
+}
+
+#get-started h4 {
+    font-size: 1rem;
+}
+
+#get-started > ul {
+    width: 50%;
+}
+
+#get-started ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+#get-started > ul > li {
+    color: var(--text-color);
+}
+
+#get-started > ul {
+    gap: var(--padding);
+}
+
+#guide a {
+    text-decoration: solid underline;
+}

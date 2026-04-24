@@ -177,235 +177,6 @@ footer a:hover {
     color: var(--secondary-color);
 }
 
-/* Main */
-
-#welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-}
-
-#welcome > h2 {
-    font-size: 2rem;
-}
-
-#welcome > h3 {
-    margin-top: var(--padding);
-    font-size: 1.25rem;
-}
-
-/* index.html */
-#main-links {
-    display: flex;
-    flex-direction: row;
-
-    list-style: none;
-
-    justify-content: center;
-    gap: 10%;
-
-    margin-top: var(--padding);
-
-    width: 100%;
-}
-
-#info-boxes {
-    display: grid;
-    gap: var(--padding);
-    grid-template-columns: repeat(2, 1fr);
-}
-
-#info-boxes h2 {
-    font-size: 1rem;
-}
-#info-boxes p {
-    font-size: 1rem;
-}
-
-#info-boxes > * {
-    background-color: var(--theme-color);
-    color: var(--text-color2);
-
-    padding: var(--padding);
-}
-
-#main-links a {
-    background-color: var(--theme-color);
-    color: var(--text-color2);
-
-    padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
-
-    border-radius: 999px; /* Tydligen finns det inget bättre sätt att göra detta på??? */
-
-    font-size: 1.125rem;
-}
-
-#main-links a:hover {
-    background-color: var(--secondary-color);
-}
-
-/* showcase.html */
-
-#showcase-img {
-    display: grid;
-    gap: var(--small-padding);
-}
-
-#showcase-img > * {
-    width: 100%;
-    height: 100%;
-
-    background-color: orange;
-}
-
-/* about.html */
-
-#faq {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-#faq h2 {
-    font-size: 1rem;
-}
-
-#faq > ul {
-    list-style: none;
-
-    width: 75%;
-}
-
-.faq-item {
-    background-color: var(--theme-color);
-}
-
-.faq-item h3:hover {
-    background-color: color-mix(in srgb, var(--theme-color), white 5%);
-}
-
-.faq-item h3 {
-    color: var(--text-color2);
-
-    padding: var(--small-padding);
-    padding-left: var(--padding);
-    padding-right: var(--padding);
-
-    cursor: pointer;
-}
-
-/* Vissa browsers har inte stöd för att interpolera mellan t.ex. 'auto' och 0px, och i så fall vill jag stänga av alla animationer där en sådan interpolering är inblandad */
-@supports (interpolate-size: allow-keywords) {
-    .faq-item p {
-        /* Här, till exempel, hade den animerat padding även om 'allow-keywords' inte tillåts, men den hade inte animerat height, och i så fall är det bättre om ingen av dem animeras */
-        transition:
-            height 0.25s ease-in-out,
-            padding 0.25s ease-in-out;
-    }
-}
-
-.faq-item a {
-    text-decoration: solid underline;
-}
-
-.faq-item *:nth-child(2) {
-    color: var(--text-color2);
-
-    overflow: hidden;
-
-    height: 0px;
-
-    padding: 0px;
-    padding-left: var(--padding);
-    padding-right: var(--padding);
-}
-
-.faq-item.open *:nth-child(2) {
-    height: auto;
-
-    padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
-}
-
-/* get_started.html */
-
-.cmd {
-    white-space: nowrap;
-    user-select: all;
-}
-
-code {
-    display: inline-block;
-
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-
-    background-color: var(--bg2);
-    padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
-    border-radius: 5px;
-}
-
-#get-started {
-    font-size: 1rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: var(--padding) var(--padding) var(--large-padding) var(--padding);
-}
-
-#get-started a {
-    text-decoration: underline;
-    color: var(--secondary-color);
-}
-
-#get-started h2 {
-    font-size: 1rem;
-
-    justify-self: center;
-    font-size: 4rem;
-    text-align: center;
-
-    margin-bottom: var(--large-padding);
-}
-
-#get-started h3 {
-    font-size: 1.5rem;
-}
-
-#get-started h4 {
-    font-size: 1rem;
-}
-
-#get-started > ul {
-    width: 50%;
-}
-
-#get-started ul {
-    display: flex;
-    flex-direction: column;
-
-    list-style: none;
-}
-
-#get-started > ul > li {
-    color: var(--text-color);
-}
-
-#get-started > ul {
-    gap: var(--padding);
-}
-
-#guide a {
-    text-decoration: solid underline;
-}
-
 /* Ease of life */
 
 main {
@@ -494,7 +265,7 @@ aside {
         grid-template-columns: 1fr;
     }
 
-    #showcase-img {
+    #showcase-images {
         grid-template-columns: 1fr;
     }
 
@@ -610,10 +381,10 @@ aside {
             "ft";
 
         grid-template-columns: 1fr;
-        grid-template-rows: auto 50vh auto;
+        grid-template-rows: auto auto auto;
     }
 
-    #showcase-img {
+    #showcase-images {
         grid-template-columns: repeat(2, 1fr);
     }
 

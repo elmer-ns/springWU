@@ -1,0 +1,70 @@
+/* Styling specifikt för about.html */
+
+#faq {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+#faq h2 {
+    font-size: 1rem;
+}
+
+#faq > ul {
+    list-style: none;
+
+    width: 75%;
+}
+
+.faq-item {
+    background-color: var(--theme-color);
+}
+
+.faq-item h3:hover {
+    background-color: color-mix(in srgb, var(--theme-color), white 5%);
+}
+
+.faq-item h3 {
+    color: var(--text-color2);
+
+    padding: var(--small-padding);
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+
+    cursor: pointer;
+}
+
+/* Vissa browsers har inte stöd för att interpolera mellan t.ex. 'auto' och 0px, och i så fall vill jag stänga av alla animationer där en sådan interpolering är inblandad */
+@supports (interpolate-size: allow-keywords) {
+    .faq-item p {
+        /* Här, till exempel, hade den animerat padding även om 'allow-keywords' inte tillåts, men den hade inte animerat height, och i så fall är det bättre om ingen av dem animeras */
+        transition:
+            height 0.25s ease-in-out,
+            padding 0.25s ease-in-out;
+    }
+}
+
+.faq-item a {
+    text-decoration: solid underline;
+}
+
+.faq-item *:nth-child(2) {
+    color: var(--text-color2);
+
+    overflow: hidden;
+
+    height: 0px;
+
+    padding: 0px;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
+
+.faq-item.open *:nth-child(2) {
+    height: auto;
+
+    padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
+}

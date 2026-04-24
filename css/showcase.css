@@ -1,0 +1,12 @@
+/* Styling specifikt för showcase.html */
+
+#showcase-images {
+    display: grid;
+    gap: var(--small-padding);
+}
+
+#showcase-images > * {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
