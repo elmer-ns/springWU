@@ -15,15 +15,15 @@ html {
 }
 
 body > main {
-    background-color: var(--bg2);
-}
-
-body > section {
     background-color: var(--bg1);
 }
 
-body > aside {
+body > section {
     background-color: var(--bg2);
+}
+
+body > aside {
+    background-color: var(--bg1);
 }
 
 footer {
@@ -36,8 +36,8 @@ footer {
     interpolate-size: allow-keywords;
 
     --bg1: rgb(255, 240, 240);
-    --bg2: rgb(240, 230, 230);
-    --bg3: rgb(238, 226, 226);
+    --bg2: #f7ecec;
+    --bg3: #faebe6;
 
     --theme-color: rgb(162, 87, 75); /* #a2574b */
     --secondary-color: rgb(226, 121, 121);
