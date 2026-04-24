@@ -16,7 +16,7 @@ code {
     border-radius: 5px;
 }
 
-#get-started {
+main {
     font-size: 1rem;
 
     display: flex;
@@ -26,12 +26,12 @@ code {
     padding: var(--padding) var(--padding) var(--large-padding) var(--padding);
 }
 
-#get-started a {
+main a {
     text-decoration: underline;
     color: var(--secondary-color);
 }
 
-#get-started h2 {
+main h2 {
     font-size: 1rem;
 
     justify-self: center;
@@ -41,30 +41,30 @@ code {
     margin-bottom: var(--large-padding);
 }
 
-#get-started h3 {
+main h3 {
     font-size: 1.5rem;
 }
 
-#get-started h4 {
+main h4 {
     font-size: 1rem;
 }
 
-#get-started > ul {
+main > ul {
     width: 50%;
 }
 
-#get-started ul {
+main ul {
     display: flex;
     flex-direction: column;
 
     list-style: none;
 }
 
-#get-started > ul > li {
+main > ul > li {
     color: var(--text-color);
 }
 
-#get-started > ul {
+main > ul {
     gap: var(--padding);
 }
 
