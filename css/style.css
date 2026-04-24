@@ -286,7 +286,7 @@ footer a:hover {
     background-color: var(--theme-color);
 }
 
-.faq-item:hover {
+.faq-item h3:hover {
     background-color: color-mix(in srgb, var(--theme-color), white 5%);
 }
 
@@ -346,7 +346,7 @@ code {
     border: 2px solid var(--secondary-color);
 
     background-color: var(--bg2);
-    padding: 1px 5px 1px 5px;
+    padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
     border-radius: 5px;
 }
 
