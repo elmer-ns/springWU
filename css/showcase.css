@@ -5,8 +5,23 @@
     gap: var(--small-padding);
 }
 
-#showcase-images > * {
+#showcase-images figure {
+    border-radius: 15px;
+
+    background-color: var(--bg1);
+    padding: var(--small-padding);
+}
+
+#showcase-images img {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
+
+    border-radius: calc(15px - var(--small-padding));
+}
+
+#showcase-images figcaption {
+    color: black;
+    font-size: 0.75rem;
+    font-family: monospace;
+    font-style: italic;
+    text-align: center;
 }
