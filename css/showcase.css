@@ -14,9 +14,7 @@
 
 #showcase-images img {
     width: 100%;
-
-    border: 1px solid var(--theme-color);
-
+.
     border-radius: calc(15px - var(--small-padding));
 }
 
