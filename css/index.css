@@ -71,3 +71,32 @@ main > nav > ul a:hover {
 
     padding: var(--padding);
 }
+
+/* Mobile */
+@media screen and (max-width: 699px) {
+    #index-container {
+        grid-template-areas:
+            "tp"
+            "mn"
+            "s1"
+            "s2"
+            "ft";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 75vh auto auto auto;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 700px) {
+    #index-container {
+        grid-template-areas:
+            "tp tp"
+            "mn mn"
+            "s1 s2"
+            "ft ft";
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 75vh auto auto;
+    }
+}

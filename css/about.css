@@ -68,3 +68,32 @@
 
     padding: var(--small-padding) var(--padding) var(--small-padding) var(--padding);
 }
+
+/* Mobile */
+@media screen and (max-width: 699px) {
+    #about-container {
+        grid-template-areas:
+            "tp"
+            "s1"
+            "as"
+            "s2"
+            "s3"
+            "ft";
+
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 700px) {
+    #about-container {
+        grid-template-areas:
+            "tp tp tp"
+            "s1 s1 as"
+            "s2 s3 as"
+            "ft ft ft";
+
+        grid-template-columns: 2fr 2fr 3fr;
+        grid-template-rows: auto 75vh 75vh auto;
+    }
+}

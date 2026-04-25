@@ -28,3 +28,36 @@
     margin-top: var(--small-padding);
     margin-bottom: var(--small-padding);
 }
+
+/* Mobile */
+@media screen and (max-width: 699px) {
+    #showcase-container {
+        grid-template-areas:
+            "tp"
+            "mn"
+            "ft";
+
+        grid-template-columns: 1fr;
+    }
+
+    #showcase-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 700px) {
+    #showcase-container {
+        grid-template-areas:
+            "tp"
+            "mn"
+            "ft";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    #showcase-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

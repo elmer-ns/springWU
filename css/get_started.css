@@ -71,3 +71,31 @@ main > ul {
 #guide a {
     text-decoration: solid underline;
 }
+
+/* Mobile */
+@media screen and (max-width: 699px) {
+    #get_started-container {
+        grid-template-areas:
+            "tp"
+            "mn"
+            "s1"
+            "ft";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 700px) {
+    #get_started-container {
+        grid-template-areas:
+            "tp"
+            "mn"
+            "s1"
+            "ft";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(60vh, auto) auto auto;
+    }
+}

@@ -48,6 +48,8 @@ footer {
     --small-padding: 5px;
     --padding: 15px;
     --large-padding: 50px;
+
+    --mobile-threshold: 700px;
 }
 
 body {
@@ -225,54 +227,6 @@ aside {
         font-size: 1rem;
     }
 
-    #index-container {
-        grid-template-areas:
-            "tp"
-            "mn"
-            "s1"
-            "s2"
-            "ft";
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 75vh auto auto auto;
-    }
-
-    #about-container {
-        grid-template-areas:
-            "tp"
-            "s1"
-            "as"
-            "s2"
-            "s3"
-            "ft";
-
-        grid-template-columns: 1fr;
-    }
-
-    #get_started-container {
-        grid-template-areas:
-            "tp"
-            "mn"
-            "s1"
-            "ft";
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-    }
-
-    #showcase-container {
-        grid-template-areas:
-            "tp"
-            "mn"
-            "ft";
-
-        grid-template-columns: 1fr;
-    }
-
-    #showcase-images {
-        grid-template-columns: 1fr;
-    }
-
     #menu-button {
         position: fixed;
         z-index: 10;
@@ -343,53 +297,6 @@ aside {
 @media screen and (min-width: 700px) {
     :root {
         font-size: 1rem;
-    }
-
-    #index-container {
-        grid-template-areas:
-            "tp tp"
-            "mn mn"
-            "s1 s2"
-            "ft ft";
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 75vh auto auto;
-    }
-
-    #about-container {
-        grid-template-areas:
-            "tp tp tp"
-            "s1 s1 as"
-            "s2 s3 as"
-            "ft ft ft";
-
-        grid-template-columns: 2fr 2fr 3fr;
-        grid-template-rows: auto 75vh 75vh auto;
-    }
-
-    #get_started-container {
-        grid-template-areas:
-            "tp"
-            "mn"
-            "s1"
-            "ft";
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto minmax(60vh, auto) auto auto;
-    }
-
-    #showcase-container {
-        grid-template-areas:
-            "tp"
-            "mn"
-            "ft";
-
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-    }
-
-    #showcase-images {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     #nav-menu {
