@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veii - Get Started</title>
-    <link rel="icon" href="img/icon.png">
+    <link rel="icon" href="img/veii.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/get_started.css">
     <link rel="stylesheet" href="css/code.css">
@@ -16,13 +16,13 @@
     <div id="top-bar">
         <header>
             <a href="index.html" class="title">
-                <img class="icon" src="img/icon.png" alt="">
+                <img class="icon" src="img/veii.svg" alt="">
                 <h1>Veii</h1>
             </a>
         </header>
         <nav id="nav-menu">
             <a href="index.html" class="title">
-                <img class="icon" src="img/icon.png" alt="">
+                <img class="icon" src="img/veii.svg" alt="">
                 <h1>Veii</h1>
             </a>
             <menu id="nav-links">
@@ -57,7 +57,8 @@
                 <h3>Use the crate</h3>
 
                 <h4>Add as dependency:</h4>
-                <p>To create your own custom applications in Rust with Veii, use <code class="cmd">cargo add veii</code> to add Veii
+                <p>To create your own custom applications in Rust with Veii, use <code class="cmd">cargo add veii</code>
+                    to add Veii
                     as a depedency to your own project. Allows you to create your own custom UI node properties, compile
                     you own runtime, or write your application in pure Rust.</p>
 
@@ -70,25 +71,30 @@
             </li>
         </ul>
     </main>
-    
+
     <section id="guide">
         <h2>Using Veii</h2>
-        
+
         <h3>Veii Rust crate</h3>
         <p>main.rs</p>
         <code class="dark">
             <span class="keyword">use</span> <span class="crate">veii</span><br>
             <br>
             <span class="keyword">fn</span> <span class="function">main</span>() {<br>
-            &emsp;<span class="keyword">let</span> app = <span class="ident">App</span>::<span class="function">new</span>();<br>
+            &emsp;<span class="keyword">let</span> app = <span class="ident">App</span>::<span
+                class="function">new</span>();<br>
             &emsp;<span class="keyword">let</span> window = app.<span class="function">create_window</span>();<br>
             &emsp;app.<span class="function">insert_node</span>(window, (<br>
-            &emsp;&emsp;<span class="ident">BackgroundColor</span>(<span class="ident">Color</span>::<span class="const">WHITE</span>),<br>
-            &emsp;&emsp;<span class="ident">Text</span>(<span class="value">"test"</span>.<span class="function">into</span>()),<br>
-            &emsp;&emsp;<span class="ident">TextColor</span>(<span class="ident">Color</span>::<span class="const">BLACK</span>)));<br>
-            &emsp;app.<span class="function">run_with_backend</span>::&lt;<span class="ident">WinitBackend</span>&gt;();<br>
+            &emsp;&emsp;<span class="ident">BackgroundColor</span>(<span class="ident">Color</span>::<span
+                class="const">WHITE</span>),<br>
+            &emsp;&emsp;<span class="ident">Text</span>(<span class="value">"test"</span>.<span
+                class="function">into</span>()),<br>
+            &emsp;&emsp;<span class="ident">TextColor</span>(<span class="ident">Color</span>::<span
+                class="const">BLACK</span>)));<br>
+            &emsp;app.<span class="function">run_with_backend</span>::&lt;<span
+                class="ident">WinitBackend</span>&gt;();<br>
             }
-            
+
         </code>
         <p>Please refer to our <a href="https://docs.rs/veii">documentation</a> for more details.</p>
 
@@ -99,7 +105,9 @@
 
     <footer>
         <nav>
-            <a href=""><h2>Veii</h2></a>
+            <a href="">
+                <h2>Veii</h2>
+            </a>
             <a href="https://github.com/elmer-ns/veii">Github</a>
         </nav>
         ©2026 No one. There Is No Copyright Here!
